@@ -1,5 +1,5 @@
 const Bot = require('./struct/Bot')
-
+var bot = new Discord.Client();
 const config = require('./config')
 
 Bot().then(bot => {
@@ -15,3 +15,5 @@ Bot().then(bot => {
     require('./functions/specialHelp')
     bot.login(config.token)
 }).catch(err => console.log(err));
+
+bot.login(process.env.B0T_T0KEN);
